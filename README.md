@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![DANON Logo]([./img.jpg])
+![DANON Logo](./img.jpg)
 
 [![PyPI version](https://badge.fury.io/py/danon.svg)](https://badge.fury.io/py/danon)
 [![Python Version](https://img.shields.io/badge/pythonversion-python3.13.2-brightgreen.svg)](https://www.python.org/downloads/release/python-3132)
