@@ -15,7 +15,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 # 核心依赖
 core_requirements = [
-    "torch>=1.8.0,<2.0.0",  # PyTorch深度学习框架
+    "torch>=1.8.0",  # PyTorch深度学习框架
     "numpy>=1.19.0,<2.0.0",  # 数值计算库
     "pandas>=1.2.0,<2.0.0",  # 数据处理库
     "scikit-learn>=0.24.0,<2.0.0",  # 机器学习工具库
@@ -23,6 +23,7 @@ core_requirements = [
     "deepspeed>=0.9.0",  # 分布式训练优化
     "bitsandbytes>=0.39.0",  # 8-bit优化
     "torch-xla>=1.12",  # TPU支持
+    "tqdm>=4.60.0,<5.0.0",  # 进度条
 ]
 
 # 可视化依赖
@@ -37,7 +38,6 @@ visualization_requirements = [
 monitoring_requirements = [
     "psutil>=5.8.0,<6.0.0",  # 系统资源监控
     "gputil>=1.4.0,<2.0.0",  # GPU监控
-    "tqdm>=4.60.0,<5.0.0",  # 进度条
     "pytorch-memlab>=0.2.0",  # PyTorch内存分析
     "torch-tb-profiler>=0.4.0",  # PyTorch性能分析
 ]
@@ -91,6 +91,7 @@ profiling_requirements = [
     "scalene>=1.3.0,<2.0.0",  # CPU/GPU性能分析
     "torch-optimizer>=0.3.0",  # 优化器集合
     "apex>=0.1",  # NVIDIA APEX优化
+    "pytorch-memlab>=0.2.0",  # PyTorch内存分析
 ]
 
 # 大规模模型训练依赖
@@ -140,16 +141,15 @@ setup(
     
     # 依赖配置
     python_requires=">=3.8",
-    install_requires=core_requirements + visualization_requirements + monitoring_requirements,
+    install_requires=core_requirements + visualization_requirements + monitoring_requirements + large_model_requirements,
     extras_require={
         "dev": test_requirements + quality_requirements + docs_requirements,
         "test": test_requirements,
         "docs": docs_requirements,
         "distributed": distributed_requirements,
         "profiling": profiling_requirements,
-        "large-model": large_model_requirements,  # 新增大规模模型支持
-        "all": test_requirements + quality_requirements + docs_requirements + 
-               distributed_requirements + profiling_requirements + large_model_requirements
+        "all": (test_requirements + quality_requirements + docs_requirements + 
+                distributed_requirements + profiling_requirements + large_model_requirements)
     },
     
     # 命令行工具

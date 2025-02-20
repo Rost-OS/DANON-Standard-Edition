@@ -3,7 +3,7 @@
 <div align="center">
 
 ![DANON Logo](./img.jpg)
-[![Python Version](https://img.shields.io/badge/pythonversion-python3.13.2-brightgreen.svg)](https://www.python.org/downloads/release/python-3132)
+[![Python Version](https://img.shields.io/badge/pythonversion-python3.9.x-brightgreen.svg)](https://mirrors.huaweicloud.com/python/3.9.10/python-3.9.10.exe)
 [![Documentation Status](https://readthedocs.org/projects/danon/badge/?version=latest)](https://danon.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/danon/danon.svg?branch=master)](https://travis-ci.org/danon/danon)
 [![Coverage Status](https://coveralls.io/repos/github/danon/danon/badge.svg?branch=master)](https://coveralls.io/github/danon/danon?branch=master)
